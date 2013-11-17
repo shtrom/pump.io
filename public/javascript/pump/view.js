@@ -2719,6 +2719,9 @@
         ready: function() {
             var view = this;
 
+            view.$('#note-content').resizable({
+                containment: "#modal-body"
+            });
             view.$('#note-content').wysihtml5({
                 customTemplates: Pump.wysihtml5Tmpl
             });
@@ -2799,6 +2802,9 @@
             view.$("#picture-to").select2(Pump.selectOpts());
             view.$("#picture-cc").select2(Pump.selectOpts());
 
+	    view.$('#picture-description').resizable({
+		containment: "#picture-fineupload"
+	    });
             view.$('#picture-description').wysihtml5({
                 customTemplates: Pump.wysihtml5Tmpl
             });
